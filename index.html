@@ -4,34 +4,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/styles.css">
-  <script src="app.js"></script>
-  <title>Milestone Project 1</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" integrity="sha512-5fsy+3xG8N/1PV5MIJz9ZsWpkltijBI48gBzQ/Z2eVATePGHOkMIn+xTDHIfTZFVb9GMpflF2wOWItqxAP2oLQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Learned and incorporated "skeleton" to help style this project. Skeleton is a simple responsive boilerplate, not quite a framework, but serves the purpose I required for this project. -->
+  <title>Milestone Project 1 (Guess the Number) </title>
 </head>
 <body>
-  <h1>Milestone Project 1</h1>
-  <h2>Snake Game with Added Functionality</h2>
-  
+  <div class="container">
+    <h1>Guess The Number</h1>
+    <div id="game">
+      <p>Guess a number between <span class="min-num">1</span> and <span class="max-num">10</span></p>
+      <input type="number" id="guess-input" placeholder="Enter your guess...">
+      <input type="submit" value="Submit" id="guess-value">
+      <p class="message"></p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
-
-
-
-<!-- SNAKE GAME WITH ADDED FUNCTIONALITY 
-
-sources:
-1. app js - used for defining variables/ constants for the game
-
-2. movement js - used to define movement mechanics used in the game
-
-3. item js - used to give functionality to items used
-
-4. snake js - used to give functionality to the playable character
-
-5. newNPC js (potentially) - would be used to define movement and traits for npc to enhance user experience
-
-6. inventory js (potentially) - used to give functionality to inventory items picked up to be used in game
-
-7. timer js - (potentially) used to give functionality to game timer to extend current level
-
-7. useItem js (maybe can incorporate in with snake js, item js, inventory js, or with movement js) -->
