@@ -28,7 +28,8 @@ maxNum.textContent = max;
 
 
 // Event Listener
-guessBtn.addEventListener('click', function(){
+guessBtn.addEventListener('click', function(e){
+  e.preventDefault();
   let guess = parseInt(guessInput.value);
   
   // Validating a correct value was entered
@@ -43,9 +44,42 @@ guessBtn.addEventListener('click', function(){
   // Checking if player guessed the right number
   // This functionality will create a green border around the box to let the player know they've won, with a message stating they've won in green as well! We can test this by entering the number 2, as indicated by winningNum variable above. (Will incorporate more advanced functionality later)
   if(guess === winningNum){
+    // Game Over, you won!
+    // Disable Input
     guessInput.disabled = true;
+    // Change border color
     guessInput.style.borderColor = 'green';
-    setMessage(`${winningNum} is Correct! YOU WON!`, 'green');
+    // Set message
+    setMessage(`${winningNum} is Correct! YOU WON!!!`, 'green');
+
+  } else {
+    // Wrong Number
+    guessesLeft = guessesLeft -1; // guessesLeft -=1??? Works, but don't know if this is a correct way to refactor this
+
+    if(guessesLeft === 0){
+    // Game Over - you lose
+
+    // Disable Input
+    guessInput.disabled = true;
+
+    // Change Border Color
+    guessInput.style.borderColor = 'red';
+
+    // Set Message
+    setMessage(`Game Over, you lost. The correct number was ${winningNum}`, 'red');
+    
+    } else {
+      // Game Continues - answer wrong
+
+      // Change Border Color
+      guessInput.style.borderColor = 'red';
+
+      // Disable Input
+      guessInput.value = '';
+
+      // Tell user answer was incorrect
+      setMessage(`${guess} is not correct, ${guessesLeft} guesses left.`, 'red');
+    }
   }
 });
 
