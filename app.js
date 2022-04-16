@@ -44,30 +44,14 @@ guessBtn.addEventListener('click', function(e){
   // Checking if player guessed the right number
   // This functionality will create a green border around the box to let the player know they've won, with a message stating they've won in green as well! We can test this by entering the number 2, as indicated by winningNum variable above. (Will incorporate more advanced functionality later)
   if(guess === winningNum){
-    // Game Over, you won!
-    // Disable Input
-    guessInput.disabled = true;
-    // Change border color
-    guessInput.style.borderColor = 'green';
-    // Set message
-    setMessage(`${winningNum} is Correct! YOU WON!!!`, 'green');
-
+  gameOver(true, `${winningNum} is correct! YOU WIN!!!`)
   } else {
     // Wrong Number
-    guessesLeft = guessesLeft -1; // guessesLeft -=1??? Works, but don't know if this is a correct way to refactor this
+    guessesLeft -= 1;
 
     if(guessesLeft === 0){
     // Game Over - you lose
-
-    // Disable Input
-    guessInput.disabled = true;
-
-    // Change Border Color
-    guessInput.style.borderColor = 'red';
-
-    // Set Message
-    setMessage(`Game Over, you lost. The correct number was ${winningNum}`, 'red');
-    
+    gameOver(false, `Game Over, you lost. The correct number was ${winningNum}`);
     } else {
       // Game Continues - answer wrong
 
@@ -83,10 +67,26 @@ guessBtn.addEventListener('click', function(e){
   }
 });
 
+
+// Game Over
+function gameOver(won, msg){
+  let color;
+  won === true ? color = 'green' : color = 'red';
+  // Disable Input
+  guessInput.disabled = true;
+  // Change border color
+  guessInput.style.borderColor = color;
+  // text color
+  message.style.color = color;
+  // Set message
+  setMessage(msg);
+}
+
+
 // Set Message Function
 function setMessage(msg, color){
   message.style.color = color;
   message.textContent = msg;
 }
 
-// If player guesses wrong number, will notify player that their answer was not correct and tell them how many guesses they have left.
+// html input attribute minlength = '1'
