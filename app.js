@@ -9,7 +9,7 @@
 // Game Values
 let min = 1;
 let max = 10;
-let winningNum = 2 //need to create a function that will generate a random number
+let winningNum = getRandomNumber(min, max); 
 let guessesLeft = 3;
 
 
@@ -95,6 +95,11 @@ function gameOver(won, msg){
 
 }
 
+// Get Winning Number
+function getRandomNumber(min, max){
+  return Math.floor(Math.random()*(max-min+1)+min)
+  // console.log(Math.floor(Math.random()*(max-min+1)+min)); // 10 takeaway 9 + 1 = 10
+}
 
 // Set Message Function
 function setMessage(msg, color){
