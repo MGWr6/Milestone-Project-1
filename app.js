@@ -26,29 +26,20 @@ const message = document.querySelector('.message');
 minNum.textContent = min;
 maxNum.textContent = max;
 
-// Play again event Listener
-game.addEventListener('mousedown', function(e){
-  if(e.target.className === 'play-again'){
-    e.preventDefault();
-    window.location.reload();
-  }
-})
-
 
 // Event Listener
-guessBtn.addEventListener('click', function(e){
-  e.preventDefault();
+guessBtn.addEventListener('click', function(){
   let guess = parseInt(guessInput.value);
+  // console.log(guess);
   
-  // Validating a correct value was entered
+  // Validating a correct input was entered
   // This functionality should ensure that only the parameters I've set can be entered. If a value outside the parameters is entered, or no value at all, the Message will display in red 'Please enter a number between " " and " ". This can be tested by entering any number outside 1-10 and clicking submit or entering no number at all and clicking submit
+  
   if(isNaN(guess) || guess < min || guess > max){
     setMessage(`Please enter a number between ${min} and ${max}`, 'red');
-  }
+  } else {
 
   // console.log(guessInput.value)
-
-
   // Checking if player guessed the right number
   // This functionality will create a green border around the box to let the player know they've won, with a message stating they've won in green as well! We can test this by entering the number 2, as indicated by winningNum variable above. (Will incorporate more advanced functionality later)
   if(guess === winningNum){
@@ -72,9 +63,16 @@ guessBtn.addEventListener('click', function(e){
       // Tell user answer was incorrect
       setMessage(`${guess} is not correct, ${guessesLeft} guesses left.`, 'red');
     }
+    }
   }
 });
 
+// Play again event Listener
+game.addEventListener('mousedown', function(e){
+  if(e.target.className === 'play-again'){
+    window.location.reload();
+  }
+})
 
 // Game Over
 function gameOver(won, msg){
