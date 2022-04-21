@@ -1,0 +1,30 @@
+ body {
+  background-image: url('assets/numbers-g2d5f1658f_1920.jpg');
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0;
+} 
+
+.container {
+  border: 5px solid #33add9;
+  border-radius: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 30em;
+  height: 18em;
+  background-color: antiquewhite;
+}
+
+
+/* Container Border */
+/* .container {
+  border: 12px solid #B22222;
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  } */

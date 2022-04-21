@@ -20,11 +20,24 @@ const maxNum = document.querySelector('.max-num');
 const guessBtn = document.querySelector('#guess-btn');
 const guessInput = document.querySelector('#guess-input');
 const message = document.querySelector('.message');
+// const container = document.querySelector('.container')
 
 
 // Assign UI min and max
 minNum.textContent = min;
 maxNum.textContent = max;
+
+// Event Handler
+guessBtn.addEventListener('click', function runEvent(e) {
+  // guessBtn.style.backgroundColor = 'salmon';
+  guessBtn.style.color = 'rgb(${e.offsetX}, ${e.offsetY}, 40)';
+
+});
+
+// function runEvent(e) {
+
+//   style.color = `rgb(${e.offsetX}, ${e.offsetY}, 40)`
+// }
 
 
 // Event Listener
@@ -73,6 +86,14 @@ game.addEventListener('mousedown', function(e){
     window.location.reload();
   }
 })
+
+// Event Handler
+
+
+function runEvent(e) {
+
+  document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40)`
+}
 
 // Game Over
 function gameOver(won, msg){
