@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto+Slab:wght@500&family=Source+Sans+Pro:wght@200;400;600&display=swap');
  
  .demo-wrap {
-  
   background-image: url('assets/numbers-g2d5f1658f_1920.jpg');
   width: 100%;
   min-height: 100vh;
@@ -18,7 +17,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  background-color: #66d0c2;
+  background-color: #86e2c9;
   width: 700px;
   border-radius: 20px;
   border-color: aqua;
@@ -45,12 +44,20 @@
   color: white;
 } */
 
-#guess-btn {
+#guess-btn:hover {
+  background-color: #2b728a;
   color: white;
   border-color: white;
-
 }
 
+#guess-btn {
+  color: black;
+  border-color: black;
+}
+
+.message {
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
 
 /* Container Border */
 /* .container {

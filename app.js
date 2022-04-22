@@ -27,18 +27,6 @@ const message = document.querySelector('.message');
 minNum.textContent = min;
 maxNum.textContent = max;
 
-// Event Handler
-guessBtn.addEventListener('click', function runEvent(e) {
-  // guessBtn.style.backgroundColor = 'salmon';
-  guessBtn.style.color = 'rgb(${e.offsetX}, ${e.offsetY}, 40)';
-
-});
-
-// function runEvent(e) {
-
-//   style.color = `rgb(${e.offsetX}, ${e.offsetY}, 40)`
-// }
-
 
 // Event Listener
 guessBtn.addEventListener('click', function(){
@@ -87,13 +75,6 @@ game.addEventListener('mousedown', function(e){
   }
 })
 
-// Event Handler
-
-
-function runEvent(e) {
-
-  document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40)`
-}
 
 // Game Over
 function gameOver(won, msg){
