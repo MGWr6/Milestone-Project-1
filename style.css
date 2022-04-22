@@ -1,4 +1,7 @@
- body {
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto+Slab:wght@500&family=Source+Sans+Pro:wght@200;400;600&display=swap');
+ 
+ .demo-wrap {
+  
   background-image: url('assets/numbers-g2d5f1658f_1920.jpg');
   width: 100%;
   min-height: 100vh;
@@ -11,15 +14,30 @@
 } 
 
 .container {
-  border: 5px solid #0b2b38;
+  position: rel;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #66d0c2;
+  width: 700px;
+  border-radius: 20px;
+  border-color: aqua;
+  text-align: center;
+  font-family: 'Roboto Slab';
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; 
+  padding: 25px;
+}
+/* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
+
+  /* border: 5px solid #0b2b38;
   border-radius: 5px;
   margin-top: 15px;
   margin-bottom: 15px;
   width: 30em;
   height: 18em;
   background-color: #66d0c2;
-  padding-left: 1em;
-}
+  padding-left: 1em; */
+
 
 
 /* #guess-input {
@@ -41,3 +59,10 @@
   margin-top: 15px;
   margin-bottom: 15px;
   } */
+
+  /*
+  center text
+  round edges
+  get rid of border and add drop shadow
+  clean up spacing
+  enlarge container
