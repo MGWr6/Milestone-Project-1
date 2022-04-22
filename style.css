@@ -13,18 +13,23 @@
 } 
 
 .container {
-  position: rel;
+  position: relative;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  background-color: #86e2c9;
+  background:
+  linear-gradient(red, transparent),
+  linear-gradient(to top left, blue, transparent),
+  linear-gradient(to top right, lime, transparent);
+  background-blend-mode: screen; 
   width: 700px;
   border-radius: 20px;
-  border-color: aqua;
   text-align: center;
   font-family: 'Roboto Slab';
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; 
-  padding: 25px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, 
+  rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, 
+  rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; 
+  padding: 30px;
 }
 /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
 
@@ -55,8 +60,16 @@
   border-color: black;
 }
 
+p {
+  font-size: large;
+}
+
 .message {
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-size: larger;
+  display: flex;
+  background-color: wheat;
+  border-radius: 20px;
+  justify-content: space-around;
 }
 
 /* Container Border */
