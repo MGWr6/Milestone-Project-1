@@ -79,7 +79,7 @@ game.addEventListener('mousedown', function(e){
 // Game Over
 function gameOver(won, msg){
   let color;
-  won === true ? color = 'white'  : color = 'red';
+  won === true ? color = 'green'  : color = 'red';
   
   // Disable Input
   guessInput.disabled = true;

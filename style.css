@@ -17,40 +17,26 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  background:
-  linear-gradient(red, transparent),
+  background-color: rgb(242, 217, 233);
+  /* linear-gradient(red, transparent),
   linear-gradient(to top left, blue, transparent),
-  linear-gradient(to top right, lime, transparent);
-  background-blend-mode: screen; 
-  width: 700px;
+  linear-gradient(to top right, lime, transparent); */
+   
+  width: 800px;
   border-radius: 20px;
   text-align: center;
   font-family: 'Roboto Slab';
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, 
   rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, 
-  rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; 
-  padding: 30px;
+  rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  padding: 50px; 
 }
-/* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
-
-  /* border: 5px solid #0b2b38;
-  border-radius: 5px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  width: 30em;
-  height: 18em;
-  background-color: #66d0c2;
-  padding-left: 1em; */
-
-
-
-/* #guess-input {
-  border: solid;
-  color: white;
-} */
 
 #guess-btn:hover {
-  background-color: #2b728a;
+  background: linear-gradient(red, transparent),
+  linear-gradient(to top left, blue, transparent),
+  linear-gradient(to top right, lime, transparent);
+  background-blend-mode: screen;
   color: white;
   border-color: white;
 }
@@ -61,28 +47,9 @@
 }
 
 p {
-  font-size: large;
+  font-size: larger;
 }
 
 .message {
   font-size: larger;
-  display: flex;
-  background-color: wheat;
-  border-radius: 20px;
-  justify-content: space-around;
 }
-
-/* Container Border */
-/* .container {
-  border: 12px solid #B22222;
-  border-radius: 10px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  } */
-
-  /*
-  center text
-  round edges
-  get rid of border and add drop shadow
-  clean up spacing
-  enlarge container
